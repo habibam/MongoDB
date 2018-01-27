@@ -3,7 +3,7 @@
 2. create students collection
     db.createCollection("students")
 3-4. create 5 students with name, home state, lucky number, birthday(object)
-    db.students.insert({name:"Dustin", home_state:"WA", lucky_number:42, birthday:{month:6, day:13, year:1988}})
+    db.students.insert({name:"habiba", home_state:"WA", lucky_number:42, birthday:{month:6, day:13, year:1988}})
 5. get all students
     db.students.find({}).pretty()
 6. get all students from WA or CA...
@@ -18,7 +18,7 @@
 8. in one operation, add field to each student collection called interests(array). should contain 'coding,' 'brunch', 'mongodb'
     db.students.update({}, {$set: {interests:["coding", "brunch", "MongoDB"]}}, {multi:true})
 9. add some unique interests
-    db.students.update({name:"Dustin Schroeder"}, {$set:{interests:["board games"]}})
+    db.students.update({name:"Habiba Mohamed"}, {$set:{interests:["board games"]}})
 10. add taxes to someone's interests
     db.students.update({name:"Sherlock"}, {$set:{interests:["taxes"]}})    
 11. remove taxes that you just added
